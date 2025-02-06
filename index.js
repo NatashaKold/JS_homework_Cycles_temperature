@@ -11,14 +11,14 @@ for (city of cities){
     list.append(newItem);
 }
 
-let min;
 let max;
+let min;
 
 function findMaxMin(arr) {
     let i;
     max = arr[0];
     min = arr[0];
-    for (let i = 0; i < arr.length; i++) {
+    for (i = 1; i < arr.length; i++) {
       if (arr[i] > max) {
         max = arr[i];
       } else if (arr[i] < min) {
@@ -26,8 +26,7 @@ function findMaxMin(arr) {
       }
     }
     
-    return max;
-    return min;
+    return {max, min} ;
   }
 
 findMaxMin(temps);
